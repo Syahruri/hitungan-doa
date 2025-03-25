@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Bacaan Doa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('photo_2025-03-25_14-34-07.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 20px;
+            direction: rtl;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px;
+            font-size: 18px;
+            margin: 5px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-reset {
+            background-color: #dc3545;
+            color: white;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h2>Hitung Bacaan Doa</h2>
+        <p>اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</p>
+        <h3>Jumlah Bacaan: <span id="count">0</span></h3>
+        <button class="btn-primary" onclick="tambahHitungan()">Tambah</button>
+        <button class="btn-reset" onclick="resetHitungan()">Reset</button>
+        <div class="footer">By <b>Syahruri_</b></div>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function tambahHitungan() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        function resetHitungan() {
+            count = 0;
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+</body>
+</html>
